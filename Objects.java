@@ -10,5 +10,6 @@ public class Objects {
         rectangle.rectangleArea();
 
     }
+
 }
 
