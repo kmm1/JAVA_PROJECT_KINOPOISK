@@ -1,29 +1,29 @@
 /**
  * Created by icons on 2.4.17.
  */
-public class Product {
+public class Products {
 
-    private int productId;
+    private int id;
     private String productName;
     private String productModel;
     private int productAvailable;
     private int productPrice;
 
 
-    public Product(int productId, String productName, String productModel, int productAvailable, int productPrice) {
-        this.productId = productId;
+    public Products(int id, String productName, String productModel, int productAvailable, int productPrice) {
+        this.id = id;
         this.productName = productName;
         this.productModel = productModel;
         this.productAvailable = productAvailable;
         this.productPrice = productPrice;
     }
 
-    public void setProductId(int productId) {
-        this.productId = productId;
+    public void setProductId(int id) {
+        this.id = id;
     }
 
     public int getProductId() {
-        return productId;
+        return id;
     }
 
     public void setProductName(String productName) {

@@ -1,8 +1,9 @@
 /**
  * Created by icons on 2.4.17.
  */
-public class Customer {
+public class Customers {
 
+    private long id;
     private String name;
     private String lastname;
     private String email;
@@ -11,13 +12,22 @@ public class Customer {
     private String address;
 
 
-    public Customer(String name, String lastname, String email, String pastword, String phone, String address) {
+    public Customers(long id, String name, String lastname, String email, String pastword, String phone, String address) {
+        this.id = id;
         this.name = name;
         this.lastname = lastname;
         this.email = email;
         this.pastword = pastword;
         this.phone = phone;
         this.address = address;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public long getId() {
+        return id;
     }
 
     public void setName(String name) {

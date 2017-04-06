@@ -1,43 +1,45 @@
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by icons on 2.4.17.
  */
-public class Order {
-    private long orderNumber;
-    private String goodsInOrder;
+public class Orders {
+    private long id;
+    private Map <String, Integer> goodsInOrder;
     private String orderFormolazedDate;
     private String orderClosingDate;
     private String orderStatus;
 
-    Order order = new Order (001, "Speed 21", "01.01.2017",
-            "01.01.2017", "delivered");
 
-    public Order(long orderNumber, String goodsInOrder, String orderFormolazedDate,
+    public Orders(long id, Map<String, Integer> goodsInOrder, String orderFormolazedDate,
                  String orderClosingDate, String orderStatus) {
-        this.orderNumber = orderNumber;
+        this.id = id;
         this.goodsInOrder = goodsInOrder;
         this.orderFormolazedDate = orderFormolazedDate;
         this.orderClosingDate = orderClosingDate;
         this.orderStatus = orderStatus;
     }
 
-    public void setOrderNumber(long orderNumber) {
-        this.orderNumber = orderNumber;
+
+    public void setOrderNumber(long id) {
+        this.id = id;
     }
 
     public long getOrderNumber() {
-        return orderNumber;
+        return id;
     }
 
-    public void setGoodsInOrder(String goodsInOrder) {
+    public void setGoodsInOrder(Map<String, Integer> goodsInOrder) {
         this.goodsInOrder = goodsInOrder;
     }
 
-    public String getGoodsInOrder() {
+    public Map<String, Integer> getGoodsInOrder() {
         return goodsInOrder;
     }
 
     public void SetOrderFormolazedDate(String orderFormolazedDate) {
-        this.goodsInOrder = orderFormolazedDate;
+        this.orderFormolazedDate = orderFormolazedDate;
     }
 
     public String getOrderFormolazedDate() {

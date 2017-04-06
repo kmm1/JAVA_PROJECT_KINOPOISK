@@ -1,14 +1,24 @@
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by icons on 2.4.17.
  */
 public class Main {
-    Customer costomer = new Customer("Владимир", "Гавриленок", "gva.sky@gmail.com",
-            "abc", "+375293035157", "Минск, ул. Гуртьева, 6-5");
+    public static void main(String[] args) {
 
-    Order order = new Order (001, "Speed 21", "01.01.2017",
-            "01.01.2017", "delivered");
 
-    Product product = new Product(1, "Kite", "Speed 21",
-            3, 2300);
+        Customers costomer = new Customers(1, "Владимир", "Гавриленок", "gva.sky@gmail.com",
+                "abc", "+375293035157", "Минск, ул. Гуртьева, 6-5");
 
+        Products product = new Products(1, "Kite", "Speed 21",
+                3, 2300);
+
+
+        Map<String, Integer> goodsInOrder = new HashMap<>();
+        Orders order = new Orders(1, goodsInOrder, "01.01.2016",
+                "01.01.2016", "delivered");
+        order.getGoodsInOrder().put("Flysurfer Speed 21", 1);
+
+    }
 }
